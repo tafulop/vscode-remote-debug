@@ -27,16 +27,16 @@ sudo apt install build-essential
 2. The next step is to git clone && build the code with debug symbols
 ```bash
 git clone <this repo> ./
-mkdir ./build
-cd ./build
-g++ -g3 -o ./hello ../src/hello_debugger.cpp
+mkdir ./cd hello-debug/build
+cd ./hello-debug/build
+g++ -g3 -o ./hello ../hello.cpp
 ```
 
 3. Deploy the application on the server side
 Normally you would like to deploy the binary with debug symbols on the server side, so do that with your own deployment method. In this example, the server will be running on the same machine, so a specified path will represent the server.
 ```bash
-mkdir ../server-mock
-cp ./build/hello ./server-mock/
+mkdir ../../server-mock
+cp hello ../../server-mock/
 ```
 
 ## Server side
@@ -53,8 +53,8 @@ sudo apt install gdbserver
 1. Start gdbserver
 As mentioned before, in this example the same host will be used for running the gdbserver and the gdb client.
 ```bash
-cd ./
-gdbserver localhost:2159 ./server-mock/hello
+cd ../../server-mock
+gdbserver localhost:2159 ./hello
 ```
 
 ## Client side
