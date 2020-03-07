@@ -7,7 +7,7 @@ In this short tutorial, a remote debugging session will be set up with Visual St
 For the sake of a simple example, the gdbserver and the gdb (client) will run on the same network - although of course this should work over any network, if the specified port is accessible on the server by the client.
 
 ## Prerequisites
-* Linux machine (The example was tested on Ubuntu 16.04)
+* Linux (The example was tested on Ubuntu 16.04)
 * VSCode installed on the client (version 1.42.1 was used in this tutorial)
 
 # Setup steps
