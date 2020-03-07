@@ -68,4 +68,10 @@ You just need to open the folder "vs-project" since the example is already set u
 
 Just click on the Debug/Start debug button or hit F5 to start debugging.
 
+In the end, it should look similar to this:
+
+![alt text](https://github.com/tafulop/vscode-remote-debug/blob/master/screenshot/debug_running.png?raw=true)
+
+
+
 3. Find all the bugs and enjoy your day! :)
