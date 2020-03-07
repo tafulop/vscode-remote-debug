@@ -14,7 +14,7 @@ For the sake of a simple example, the gdbserver and the gdb (client) will run on
 
 ## Client side
 
-0. Install required tools
+0. Install required tools (optional depending on your current installation)
 ```bash
 sudo apt install build-essential gdb
 ```
