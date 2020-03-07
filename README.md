@@ -70,7 +70,7 @@ Just click on the Debug/Start debug button or hit F5 to start debugging.
 
 In the end, it should look similar to this:
 
-![alt text](https://github.com/tafulop/vscode-remote-debug/blob/master/screenshot/debug_running.png)
+![alt text](https://github.com/tafulop/vscode-remote-debug/blob/master/screenshot/debug_running.png?raw=true)
 
 
 
