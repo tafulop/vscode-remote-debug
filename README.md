@@ -8,11 +8,16 @@ For the sake of a simple example, the gdbserver and the gdb (client) will run on
 
 ## Prerequisites
 * Linux machine (The example was tested on Ubuntu 16.04)
+* VSCode installed on the client (version 1.42.1 was used in this tutorial)
 
 # Setup steps
 
-
 ## Client side
+
+0. Install required tools
+```bash
+sudo apt install build-essential gdb
+```
 
 1. The code will be built on the client side. To build it, you may need to install the build tools.
 ```bash
@@ -22,18 +27,17 @@ sudo apt install build-essential
 2. The next step is to git clone && build the code with debug symbols
 ```bash
 git clone <this repo> ./
-g++ -g3 -o hello ./hello_debugger.cpp
+mkdir ./build
+cd ./build
+g++ -g3 -o ./hello ../src/hello_debugger.cpp
 ```
 
 3. Deploy the application on the server side
 Normally you would like to deploy the binary with debug symbols on the server side, so do that with your own deployment method. In this example, the server will be running on the same machine, so a specified path will represent the server.
 ```bash
-mkdir ./server-mock
-cp ./hello ./server-mock/
+mkdir ../server-mock
+cp ./build/hello ./server-mock/
 ```
-
-
-
 
 ## Server side
 
@@ -42,5 +46,25 @@ cp ./hello ./server-mock/
 sudo apt install gdbserver
 ```
 
-2. Deploy the application
-To get the best result, use a debug build. In this case, I have 
+# Running the example
+
+## Server side
+
+1. Start gdbserver
+As mentioned before, in this example the same host will be used for running the gdbserver and the gdb client.
+```bash
+cd ./
+gdbserver localhost:2159 ./server-mock/hello
+```
+
+## Client side
+
+1. Start Visual Studio Code
+
+You just need to open the folder "vs-project" since the example is already set up.
+
+2. Start debugging
+
+Just click on the Debug/Start debug button or hit F5 to start debugging.
+
+3. Find all the bugs and enjoy your day! :)
