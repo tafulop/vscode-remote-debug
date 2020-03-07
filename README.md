@@ -27,7 +27,8 @@ sudo apt install build-essential
 2. The next step is to git clone && build the code with debug symbols
 ```bash
 git clone <this repo> ./
-mkdir ./cd hello-debug/build
+cd vscode-remote-debug
+mkdir ./hello-debug/build
 cd ./hello-debug/build
 g++ -g3 -o ./hello ../hello.cpp
 ```
